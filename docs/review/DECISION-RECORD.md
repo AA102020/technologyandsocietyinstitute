@@ -145,13 +145,35 @@ If a later expert or executive-panel review rejects or materially changes an alr
 
 **Why:** Gives readers of text-heavy research material a reading-mode choice while preserving a restrained editorial interface. The text control is clearer and more accessible than an unlabeled icon.
 
+## D-014 — Reconstructed opening for `ai-public-policy.html`
+
+**Decision:** APPROVED AND LOCKED on 2026-08-13.
+
+**Approved title:** `AI, Data, and Public Policy`
+
+**Approved subtitle:** `AI, data, and public governance`
+
+**Approved program description:**
+
+> Examines how institutions, markets, technological systems, and organizational practices shape the development and use of AI, and how AI in turn changes economic activity, public institutions, and social life.
+
+**Protected program proposition:**
+
+> AI policy requires analysis of institutions, markets, and technical systems.
+
+**Approved explanatory paragraphs:**
+
+> Artificial intelligence systems operate through data, computing infrastructure, organizational practices, labor, procurement, and legal authority. The program studies how these arrangements shape AI development, adoption, and use across markets and public institutions.
+
+> Research examines how organizations evaluate and govern AI, how data and automated systems affect people and institutions, how markets and industrial structures shape technological development, and how public institutions build and exercise AI capabilities.
+
+**Why:** The prior opening reflected the old six-domain structure. The approved reconstruction aligns the page with the four-domain architecture, preserves infrastructure visibility, extends analysis from deployment to development and adoption, and states a mutual-shaping relationship without specialized STS terminology.
+
 ---
 
 # Pending decisions
 
-## P-001 — Reconstructed opening for `ai-public-policy.html`
-
-The title, subtitle, protected proposition, one-sentence program description, and two explanatory paragraphs have been reviewed and recommended, but the reconstructed opening has not yet received explicit approval and therefore is not controlling.
+No pending opening decision remains. The next substantive review concerns the page's guiding research questions and any remaining sections required to complete the page-level freeze.
 
 ---
 
