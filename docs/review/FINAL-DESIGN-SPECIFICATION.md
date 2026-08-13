@@ -12,17 +12,25 @@ This document contains only the currently approved design state. Decision histor
 
 # AI, Data, and Public Policy (`ai-public-policy.html`)
 
-## Program identity
+## Program identity and opening
 
 **Title:** AI, Data, and Public Policy
 
 **Subtitle:** AI, data, and public governance
 
+**Program description:**
+
+> Examines how institutions, markets, technological systems, and organizational practices shape the development and use of AI, and how AI in turn changes economic activity, public institutions, and social life.
+
 **Protected program proposition:**
 
 > AI policy requires analysis of institutions, markets, and technical systems.
 
-The broader opening reconstruction remains pending explicit approval and is therefore not yet included as final copy here.
+**Explanatory paragraphs:**
+
+> Artificial intelligence systems operate through data, computing infrastructure, organizational practices, labor, procurement, and legal authority. The program studies how these arrangements shape AI development, adoption, and use across markets and public institutions.
+
+> Research examines how organizations evaluate and govern AI, how data and automated systems affect people and institutions, how markets and industrial structures shape technological development, and how public institutions build and exercise AI capabilities.
 
 ## Core research architecture
 
