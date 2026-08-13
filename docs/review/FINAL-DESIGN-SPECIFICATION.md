@@ -8,8 +8,6 @@
 
 This document contains only the currently approved design state. Decision history, rejected alternatives, and rationales belong in `DECISION-RECORD.md`.
 
-Proposed or experimental UX features are not controlling until explicitly approved.
-
 ---
 
 # AI, Data, and Public Policy (`ai-public-policy.html`)
@@ -56,8 +54,6 @@ Infrastructure components should also be distributed selectively across the four
 
 ## Cross-program connections
 
-The page will later provide explicit connections across the Institute:
-
 - AI × Innovation and Economics
 - AI × Manufacturing Technologies
 - AI × Military Technologies
@@ -73,8 +69,6 @@ Defense AI is not treated as a sub-item within the Public-sector AI card. The in
 
 ## Removed standalone domains
 
-The following are not part of the final core-domain architecture:
-
 - Automated decisions and evaluation
 - AI infrastructure and applied analysis
 
@@ -82,19 +76,25 @@ Their substantive concerns are retained through selective distribution and the c
 
 ---
 
-# UX and visual design status
+# UX and visual design
 
-The existing visual system remains the approved baseline while UX experiments are evaluated.
+The existing visual system remains the approved baseline unless later review changes it.
 
-## UX-EXPERIMENT-01 — Light / Dark theme control
+## Light / Dark reading mode
 
-**Status:** EXPERIMENTAL, NOT YET APPROVED FOR PRODUCTION
+**Status:** APPROVED FOR PRODUCTION.
 
-Prototype branch: `agent/dark-mode-experiment`
+**Approved interaction:**
 
-The experiment tests a compact Light/Dark control, system-theme detection on first visit, remembered manual preference, accessible button semantics, and a dark palette derived from the Institute's existing CSS-variable system.
+- compact text control labeled `Dark` in light mode and `Light` in dark mode;
+- first visit follows the operating-system color preference;
+- an explicit user selection is remembered locally;
+- keyboard-accessible button semantics and visible focus treatment;
+- theme-specific dark palette derived from the Institute's visual system.
 
-No production requirement is created until explicit user approval.
+**Current implementation scope:** `ai-public-policy.html`.
+
+The control should remain visually subordinate to primary navigation and research content. Do not replace the text control with an unlabeled sun/moon icon without a new approval decision.
 
 ---
 
