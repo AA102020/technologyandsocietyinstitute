@@ -187,3 +187,42 @@ The following are frozen unless an explicit later decision reopens them:
 - Homepage-only theme control with site-wide persistence.
 
 Routine future work should focus on wording refinement, research projects, evidence, publications, UX improvements, accessibility, and implementation quality without silently altering frozen architecture.
+
+## 14. Publication families and identifier system
+
+The Institute's permanent publication families are frozen as:
+
+1. **Research Papers**
+2. **Working Papers**
+3. **Research Briefs**
+4. **Commentary**
+
+The earlier proposal to operate only three permanent families is superseded. Commentary is added as a durable series for shorter analytical work. **Essays** are not established as a separate permanent series. **Research Briefs** remain the Institute-wide concise series rather than being renamed Policy Briefs.
+
+The frozen human-readable publication-code pattern is:
+
+`TSI-[SERIES]-YYYY-##`
+
+Series abbreviations are:
+
+- Research Papers: `RP`
+- Working Papers: `WP`
+- Research Briefs: `RB`
+- Commentary: `CM`
+
+Examples include `TSI-RP-2026-01`, `TSI-WP-2026-01`, `TSI-RB-2026-01`, and `TSI-CM-2026-01`.
+
+Controlling identifier rules:
+
+- Annual numbering is independent within each publication family.
+- `YYYY` records the year of first public release in that family.
+- A publicly assigned TSI code is never reassigned to another work; gaps are preferable to reuse.
+- The TSI publication code is a human-readable Institute identifier and remains separate from DOI, ISSN, ISBN, or other external identifiers.
+- DOI suffixes are not required to reproduce or encode TSI publication codes.
+- ISSN, when obtained, identifies the continuing publication series rather than the individual publication.
+- A Working Paper later issued as a Research Paper receives a new Research Paper code while the Working Paper record remains preserved and linked.
+- A Commentary expanded into another publication family receives a new family code and retains the earlier record.
+- Version metadata is separate from the permanent TSI publication code.
+- Do not display public placeholder text such as `DOI pending` or `ISSN pending`.
+
+The detailed operating rules are controlled by `PUBLICATION-IDENTIFIER-POLICY.md` and must remain consistent with `RESEARCH-AND-PUBLICATIONS-ARCHITECTURE.md`.
