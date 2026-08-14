@@ -31,7 +31,7 @@ A project may span domains or programs when the research question genuinely requ
 
 ## 3. Publication families
 
-The initial publication architecture should use three durable families:
+The frozen publication architecture uses four durable families:
 
 ### Research Papers
 
@@ -39,22 +39,28 @@ Substantial original research presenting evidence, analysis, methods where relev
 
 ### Working Papers
 
-Research circulated while analysis remains open to revision, extension, or further empirical testing. Version history should remain visible when materially revised.
+Research circulated while analysis remains open to revision, extension, further empirical testing, or scholarly comment. Version history should remain visible when materially revised.
 
 ### Research Briefs
 
 Concise research outputs that synthesize a bounded problem, finding, dataset, institutional development, or policy-relevant implication without requiring the scope of a full Research Paper.
 
-These three families are sufficient for the initial system. Additional permanent series should be created only when a recurring output type cannot be represented coherently within them.
+### Commentary
+
+Shorter analytical essays that interpret consequential technological or institutional developments without requiring the evidentiary scope of a Research Paper or Working Paper.
+
+These four families classify outputs. They do not alter the five frozen research programs or their domain structures.
 
 ## 4. Items that are not publication families
 
-The following should remain separate from the three publication families unless a later explicit decision changes their status:
+The following remain separate from the four publication families unless a later explicit decision changes their status:
 
 - **Research Projects** are containers for ongoing investigations and their outputs.
 - **Events** are institutional activities and may connect to projects or publications.
-- **Commentary or essays** should not automatically become a permanent series. A recurring editorial need should be demonstrated first.
+- **Essays** are not a separate permanent family; shorter interpretive work ordinarily belongs in Commentary.
 - **Datasets, code, appendices, and replication materials** are research artefacts associated with projects or publications rather than equivalent publication families.
+
+Books and special reports may be considered later if a recurring output type cannot be represented coherently within the frozen families.
 
 This separation prevents the publications page from becoming a mixture of outputs, activities, and supporting materials.
 
@@ -80,6 +86,8 @@ The Institute should preserve the intellectual history of released work.
 
 The website implementation may evolve, but the publication record should remain stable enough to support citation and reconstruction of the work's development.
 
+Version metadata is separate from the permanent TSI publication code. Detailed version rules are controlled by `PUBLICATION-IDENTIFIER-POLICY.md`.
+
 ## 7. Required publication metadata
 
 Every formal publication should have a canonical record containing:
@@ -92,19 +100,35 @@ Every formal publication should have a canonical record containing:
 - primary research domain,
 - abstract or concise summary,
 - stable publication page or file location,
+- TSI publication code,
 - version or revision information when applicable.
 
 Identifiers, citation text, licensing information, datasets, code, and secondary program relationships should be added when relevant and available. Do not display empty placeholder fields such as pending DOI or pending identifier values.
 
 ## 8. Publication identifiers
 
-No identifier scheme is frozen by this document. Before assigning permanent Institute publication codes, DOI patterns, ISSNs, ISBNs, or other identifiers, establish and approve a separate identifier policy.
+The frozen human-readable publication code is:
 
-Once an identifier has been publicly assigned to a publication, it should not be casually reused or reassigned to another work.
+`TSI-[SERIES]-YYYY-##`
+
+Series abbreviations are:
+
+- Research Paper: `RP`
+- Working Paper: `WP`
+- Research Brief: `RB`
+- Commentary: `CM`
+
+Annual numbering is independent across publication families. Once a code has been publicly assigned, it is never reassigned to another work.
+
+The TSI code remains distinct from DOI, ISSN, ISBN, and other external identifiers. DOI suffixes are not required to reproduce the TSI code. ISSN, when obtained, operates at the continuing-series level rather than replacing individual TSI codes.
+
+The complete identifier, numbering, transition, file-naming, and version rules are controlled by `PUBLICATION-IDENTIFIER-POLICY.md`.
 
 ## 9. Citation and scholarly presentation
 
 Formal publications should provide a clear recommended citation once the publication metadata is complete. Citation formatting should be consistent across the Institute.
+
+The recommended citation should include the TSI publication code and, when assigned, the DOI. Neither identifier substitutes for author, title, publisher, or publication-date metadata.
 
 The publication landing page should distinguish bibliographic metadata from analytical description. Long abstracts, references, and supporting artefacts should remain readable without overwhelming navigation.
 
@@ -151,17 +175,17 @@ The publications page should prioritize discovery without becoming visually dens
 
 The primary organizing controls should be publication family and research program. Additional filtering should be introduced only when the volume of publications makes it useful.
 
-Publication cards should emphasize title, author, family, date, and concise analytical description. Avoid displaying every metadata field on the discovery card.
+Publication cards should emphasize title, author, family, date, TSI code, and concise analytical description. Avoid displaying every metadata field on the discovery card.
 
 ## 14. Publication landing pages
 
 A formal publication landing page should ordinarily contain:
 
-1. publication family and date,
+1. publication family, TSI code, and date,
 2. title and author information,
 3. abstract or executive summary,
 4. download or reading control,
-5. citation and version information,
+5. citation, DOI when assigned, and version information,
 6. related research context when useful.
 
 This is a formal information hierarchy and therefore may exceed the ordinary three-item prose rule.
@@ -206,14 +230,24 @@ This document should be updated when the Institute approves a new publication fa
 
 Changes that affect the frozen institutional or program architecture must also be recorded in `FINAL-DECISIONS.md`. Changes that affect global website implementation must also be reflected in `FINAL-WEBSITE-DESIGN-AND-ARCHITECTURE.md`.
 
-## 20. Open decisions before implementation
+The detailed publication-code policy must remain synchronized with `PUBLICATION-IDENTIFIER-POLICY.md`.
 
-The following remain deliberately unfrozen and require explicit review before implementation:
+## 20. Resolved decisions and remaining open decisions
 
-1. Permanent publication identifier and numbering convention.
-2. Whether the Institute will operate an additional Commentary or Essay series.
-3. DOI, ISSN, licensing, and repository policy.
+Resolved and frozen:
+
+1. Permanent publication families: Research Papers, Working Papers, Research Briefs, Commentary.
+2. Permanent human-readable publication-code pattern: `TSI-[SERIES]-YYYY-##`.
+3. Series abbreviations: `RP`, `WP`, `RB`, `CM`.
+4. Separate annual numbering within each family and no reassignment of publicly assigned codes.
+5. TSI codes remain separate from DOI and ISSN.
+
+Still deliberately unfrozen:
+
+1. DOI registration agency and operational deposit workflow.
+2. Whether and when each continuing series will receive an ISSN.
+3. Institute-wide licensing policy.
 4. Exact publication landing-page template and PDF design.
 5. Whether project pages launch immediately or after the publication layer is established.
 
-These questions should be resolved sequentially rather than bundled into the initial publications-page build.
+These remaining questions should be resolved sequentially rather than bundled into the initial publications-page build.
