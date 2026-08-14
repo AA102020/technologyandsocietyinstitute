@@ -23,20 +23,23 @@ The website should communicate reciprocal relationships rather than technologica
 Primary navigation:
 
 - **Research** → `research.html`
+- **Publications** → `publications.html`
 - **About** → `about.html`
 - **Contact** → `contact.html`
 
 Research program pages:
 
-1. `innovation-economics.html` — **Innovation and Economics**
-2. `ai-public-policy.html` — **AI, Data, and Public Policy**
-3. `manufacturing-technology.html` — **Manufacturing Technologies**
-4. `military-technology.html` — **Military Technologies**
-5. `regulation-society.html` — **Regulation and Society**
+1. `innovation-economics.html`: **Innovation and Economics**
+2. `ai-public-policy.html`: **AI, Data, and Public Policy**
+3. `manufacturing-technology.html`: **Manufacturing Technologies**
+4. `military-technology.html`: **Military Technologies**
+5. `regulation-society.html`: **Regulation and Society**
 
 The footer should repeat the research-program links and Institute links and display:
 
 **Technology, Society, and Institutional Evolution**
+
+Publications are an output layer beneath the stable research architecture. Adding or revising publications does not alter the five-program structure.
 
 ## 3. Homepage
 
@@ -65,6 +68,10 @@ The homepage should show the five frozen programs in this order:
 
 Each card should use the approved program subtitle and a concise relationship-based description. Program cards are a formal taxonomy and therefore may appear as a five-item structured set.
 
+### Homepage actions
+
+The hero should provide direct routes to Research, Publications, and About. These three actions connect institutional orientation, research architecture, and published outputs without adding another navigation layer.
+
 ### Theme control
 
 The Light/Dark control appears on the homepage header only. Its selection applies site-wide through shared theme logic.
@@ -78,7 +85,8 @@ File: `research.html`
 1. Research Agenda hero.
 2. Five-program research list using the frozen order.
 3. Institute-wide cross-cutting framework.
-4. Global footer.
+4. Link to the Publications layer.
+5. Global footer.
 
 ### Cross-cutting framework
 
@@ -142,7 +150,7 @@ The AI page intentionally has a richer page architecture than the other program 
 - Guiding questions.
 - **AI Infrastructure** cross-cutting section.
 - **Connected Research** linking to the other four programs.
-- Research and publications area.
+- Research and publications area linking to `publications.html`.
 - Collaboration/contact area.
 
 ### AI Infrastructure section
@@ -287,10 +295,10 @@ The exact wording should remain natural and concise.
 
 ### Global files
 
-- `style.css` — primary visual system and responsive layout.
-- `theme.css` — Light/Dark theme overrides and toggle styling.
-- `theme.js` — theme selection, persistence, and homepage control behavior.
-- `ai-page.css` — AI-page-specific layout supplements.
+- `style.css`: primary visual system and responsive layout.
+- `theme.css`: Light/Dark theme overrides, toggle styling, and narrow-header normalization.
+- `theme.js`: theme selection, persistence, and homepage control behavior.
+- `ai-page.css`: AI-page-specific layout supplements.
 
 ### Design character
 
@@ -325,7 +333,7 @@ Maintain the existing dark navy, blue, teal, pale neutral, and white/light surfa
 
 The site must support desktop, tablet, and phone widths.
 
-Current breakpoints and responsive logic in `style.css` and `ai-page.css` should be preserved unless a later regression test identifies a concrete defect.
+Current breakpoints and responsive logic in `style.css`, `theme.css`, and `ai-page.css` should be preserved unless a later regression test identifies a concrete defect.
 
 At narrower widths:
 
@@ -334,6 +342,8 @@ At narrower widths:
 - footer columns collapse,
 - the research agenda simplifies its row layout,
 - AI domain, question, infrastructure, and connected-research layouts reflow for legibility.
+
+At phone widths, the site-header brand text may be hidden while retaining the logo so that Research, Publications, About, Contact, and the homepage theme control remain usable without horizontal crowding.
 
 ## 16. Accessibility and interaction
 
@@ -366,7 +376,7 @@ Every core page should use a consistent footer containing:
 - Institute brand.
 - **Technology, Society, and Institutional Evolution**.
 - Research-program links.
-- Institute links.
+- Institute links including Research Agenda and Publications.
 - Copyright and domain line.
 
 The footer is a site-wide consistency control. Superseded taglines should not reappear on individual pages.
@@ -391,15 +401,43 @@ Before treating a future site change as complete, verify:
 2. The Regulation subtitle remains **Technology governance, institutions, and public authority**.
 3. The institutional tagline remains **Technology, Society, and Institutional Evolution**.
 4. The Research Agenda cross-cutting framework remains **Authority, Knowledge, Capability, Distribution** unless explicitly reopened.
-5. No residual long noun inventories have been introduced outside formal taxonomies.
-6. Theme selection remains homepage-controlled and site-wide persistent.
-7. All core pages load the shared theme system.
-8. Navigation and footer links remain valid.
-9. Desktop, tablet, and mobile layouts remain legible.
-10. GitHub Pages completes successfully from `main`.
+5. Publications remains a separate output layer and does not replace the Research Agenda.
+6. No residual long noun inventories have been introduced outside formal taxonomies.
+7. Theme selection remains homepage-controlled and site-wide persistent.
+8. All core pages load the shared theme system.
+9. Research, Publications, About, Contact, and footer links remain valid.
+10. Desktop, tablet, and mobile layouts remain legible.
+11. GitHub Pages completes successfully from `main`.
 
 ## 21. Completion state
 
-The core institutional architecture, five-program research architecture, page hierarchy, writing rules, Light/Dark behavior, and global design grammar are frozen as of 2026-08-14.
+The core institutional architecture, five-program research architecture, page hierarchy, writing rules, Light/Dark behavior, global design grammar, and publications discovery layer are implemented as of 2026-08-14.
 
-Future work should concentrate on publications, research-project content, evidence, accessibility improvements, selective UX refinement, and technical maintenance. Architectural changes require explicit review and decision logging in `FINAL-DECISIONS.md`.
+Future work should concentrate on publication records, research-project content, evidence, accessibility improvements, selective UX refinement, and technical maintenance. Architectural changes require explicit review and decision logging in `FINAL-DECISIONS.md`.
+
+## 22. Publications page
+
+File: `publications.html`
+
+### Controlling purpose
+
+The Publications page is the canonical discovery layer for Institute outputs. It is distinct from `research.html`, which remains the stable intellectual architecture.
+
+### Frozen publication families shown on the page
+
+1. **Research Papers**: `TSI-RP-YYYY-##`
+2. **Working Papers**: `TSI-WP-YYYY-##`
+3. **Research Briefs**: `TSI-RB-YYYY-##`
+4. **Commentary**: `TSI-CM-YYYY-##`
+
+### Current page behavior
+
+- Present the four families as a formal publication taxonomy.
+- Explain the difference between publication series and research programs.
+- State that each formal publication will have one canonical record.
+- Preserve version visibility and publication chronology.
+- Do not invent publication entries before the authoritative publication registry is established.
+- Do not display DOI or ISSN placeholders. DOI and ISSN are deferred and outside the current website implementation scope.
+- As publications are established, discovery cards should prioritize title, author, series, date, TSI code, and concise analytical description.
+
+The current Publications page intentionally launches with the publication architecture rather than fabricated or provisional publication records.
