@@ -5,7 +5,7 @@ This registry is the authoritative record of assigned Technology & Society Insti
 
 | TSI code | Publication family | Title | Author | First public release | Version | Status | Primary research program | Primary research domain | Canonical page |
 |---|---|---|---|---|---|---|---|---|---|
-| TSI-CM-2026-501 | Commentary | *The End of Human Choice: Life Under AI Rule* | Abdul Ahmed | 2026-09-10 | V3 | Published | AI, Data, and Public Policy | AI Governance and Model Risk | `tsi-cm-2026-501-end-of-human-choice.html` |
+| TSI-CM-2026-501 | Commentary | *The End of Human Choice: Life Under AI Rule* | Abdul Ahmed | 2026-09-10 | 3.1 | Published | AI, Data, and Public Policy | AI Governance and Model Risk | `tsi-cm-2026-501-end-of-human-choice.html` |
 
 ### Record notes
 
