@@ -55,6 +55,30 @@
       if (targetParagraph && publicationFigure.nextElementSibling !== targetParagraph) {
         targetParagraph.before(publicationFigure);
       }
+
+      const image = publicationFigure.querySelector('img');
+      if (image) {
+        const chunkPaths = [
+          'assets/hia-image-01.txt',
+          'assets/hia-image-02.txt',
+          'assets/hia-image-03.txt',
+          'assets/hia-image-04.txt',
+          'assets/hia-image-05.txt',
+          'assets/hia-image-06.txt',
+          'assets/hia-image-07.txt',
+          'assets/hia-image-08.txt'
+        ];
+        Promise.all(chunkPaths.map(function (path) {
+          return fetch(path).then(function (response) {
+            if (!response.ok) throw new Error('Unable to load Human-Interest AI image');
+            return response.text();
+          });
+        })).then(function (parts) {
+          image.src = 'data:image/jpeg;base64,' + parts.join('');
+        }).catch(function () {
+          // Keep the repository image as a fallback if chunk loading fails.
+        });
+      }
     }
 
     if (window.matchMedia) {
@@ -72,7 +96,7 @@
         }
       };
       if (media.addEventListener) media.addEventListener('change', followSystem);
-      else if (media.addListener) media.addListener('change', followSystem);
+      else if (media.addListener) media.addListener(followSystem);
     }
   });
 })();
