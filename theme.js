@@ -60,7 +60,7 @@
       if (image) {
         const chunkPaths = [
           'assets/hia-image-01a.txt','assets/hia-image-01b.txt','assets/hia-image-01c.txt','assets/hia-image-01d.txt',
-          'assets/hia-image-02a.txt','assets/hia-image-02b.txt','assets/hia-image-02c.txt','assets/hia-image-02d.txt',
+          'assets/hia-image-02a.txt','assets/hia-image-02b1.txt','assets/hia-image-02b2.txt','assets/hia-image-02c.txt','assets/hia-image-02d.txt',
           'assets/hia-image-03a.txt','assets/hia-image-03b.txt','assets/hia-image-03c.txt','assets/hia-image-03d.txt',
           'assets/hia-image-04.txt','assets/hia-image-05.txt','assets/hia-image-06.txt','assets/hia-image-07.txt','assets/hia-image-08.txt'
         ];
