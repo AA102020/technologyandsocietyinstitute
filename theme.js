@@ -47,6 +47,16 @@
       }
     }
 
+    const publicationFigure = document.querySelector('.publication-article article > .publication-image');
+    if (publicationFigure) {
+      const targetParagraph = Array.from(document.querySelectorAll('.publication-article article > p')).find(function (paragraph) {
+        return paragraph.textContent.trim().startsWith('Human-Interest AI will become difficult to oppose because it will work.');
+      });
+      if (targetParagraph && publicationFigure.nextElementSibling !== targetParagraph) {
+        targetParagraph.before(publicationFigure);
+      }
+    }
+
     if (window.matchMedia) {
       const media = window.matchMedia('(prefers-color-scheme: dark)');
       const followSystem = function (event) {
@@ -62,7 +72,7 @@
         }
       };
       if (media.addEventListener) media.addEventListener('change', followSystem);
-      else if (media.addListener) media.addListener(followSystem);
+      else if (media.addListener) media.addListener('change', followSystem);
     }
   });
 })();
