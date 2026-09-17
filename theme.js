@@ -59,14 +59,10 @@
       const image = publicationFigure.querySelector('img');
       if (image) {
         const chunkPaths = [
-          'assets/hia-image-01.txt',
-          'assets/hia-image-02.txt',
-          'assets/hia-image-03.txt',
-          'assets/hia-image-04.txt',
-          'assets/hia-image-05.txt',
-          'assets/hia-image-06.txt',
-          'assets/hia-image-07.txt',
-          'assets/hia-image-08.txt'
+          'assets/hia-image-01a.txt','assets/hia-image-01b.txt','assets/hia-image-01c.txt','assets/hia-image-01d.txt',
+          'assets/hia-image-02a.txt','assets/hia-image-02b.txt','assets/hia-image-02c.txt','assets/hia-image-02d.txt',
+          'assets/hia-image-03a.txt','assets/hia-image-03b.txt','assets/hia-image-03c.txt','assets/hia-image-03d.txt',
+          'assets/hia-image-04.txt','assets/hia-image-05.txt','assets/hia-image-06.txt','assets/hia-image-07.txt','assets/hia-image-08.txt'
         ];
         Promise.all(chunkPaths.map(function (path) {
           return fetch(path).then(function (response) {
@@ -76,7 +72,7 @@
         })).then(function (parts) {
           image.src = 'data:image/jpeg;base64,' + parts.join('');
         }).catch(function () {
-          // Keep the repository image as a fallback if chunk loading fails.
+          // Retain the repository image if the enhanced image cannot be loaded.
         });
       }
     }
@@ -96,7 +92,7 @@
         }
       };
       if (media.addEventListener) media.addEventListener('change', followSystem);
-      else if (media.addListener) media.addListener(followSystem);
+      else if (media.addListener) media.addListener('change', followSystem);
     }
   });
 })();
